@@ -18,126 +18,122 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="head">
-            <header>
-                <div class="logo">
-                    <img src="./img/logo.svg" alt="logo">
-                </div>
-
-                <div class="actions">
-                    <nav>
-                        <ul>
-                            <li><a href="#">ABOUT</a></li>
-                            <li><a href="#">HOW TO</a></li>
-                            <li><a href="#">FAQS</a></li>
-                        </ul>
-                    </nav>
-
-                    <button>CONTACT US</button>
-                </div>
-            </header>
-
-            <section class="head__section">
-                <h1>Your awesome<br>
-                    traffic permit<br>
-                    consultant.</h1>
-
-                <button>GET STARTED
-                    <img src="./img/arrow.svg" alt="→">
-                </button>
-            </section>
-
-            <img src="./img/car.svg" alt="car" class="car">
+    <header>
+        <div class="navbar">
+            <img class="logo" src="./img/logo.svg" alt="logo">
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#aboutSection">ABOUT</a></li>
+                    <li><a href="#applySection">HOW TO</a></li>
+                    <li><a href="#faqsSection">FAQS</a></li>
+                    <li class="header__button"><a href="">CONTACT US</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+
+        <section class="intro">
+            <div class="intro__content">
+                <h1>Your awesome traffic permit consultant.</h1>
+                <button class="intro__button" id="scrollBtn">Get Started</button>
+            </div>
+        </section>
+        <div class="header__menu">
+            <img src="img/menu-icon.svg" onclick="onClick()" alt="Menu icon">
+        </div>
+    </header>
 
     <main>
-        <section class="about">
+        <section class="about scroll-animate" id="aboutSection">
             <div class="container">
-                <h3 class="default__heading">ABOUT US</h3>
-
-                <p class="about__title">The occupational traffic permit is one of the most important things in the
-                    company when carrying out
-                    freight transport. In fact, it is a prerequisite for doing business traffic at all. </p>
-
-                <p class="about__paragraph">How do you do when you need to obtain
-                    a commercial traffic permit for freight transport to your business?</p>
+                <div>
+                    <h2 class="title">ABOUT US</h2>
+                    <p class="paragraph">The occupational traffic permit is one of the most
+                        important things in the company when carrying out
+                        freight transport. In fact, it is a prerequisite for doing
+                        business traffic at all.
+                    </p>
+                    <div class="about__notification">
+                        <p>
+                            How do you do when you need to obtain
+                            a commercial traffic permit for freight
+                            transport to your business?
+                        </p>
+                    </div>
+                </div>
+                <img class="about__illustration" src="img/about_us.svg" alt="about_us">
             </div>
         </section>
 
-        <section class="apply">
+        <section class="how_to_apply scroll-animate" id="applySection">
             <div class="container">
-                <div class="apply__title">
-                    <h3 class="default__heading">HOW TO APPLY</h3>
-
-                    <p>When applying for a traffic permit, there are certain requirements that you must meet that are
-                        included in the examination: requirements for professional knowledge, solid establishment, good
-                        reputation and financial resources. Important to remember is to confirm your application for a
-                        traffic permit by the company's company signer or CEO.</p>
+                <img class="apply__illustration" src="img/how_to_apply.svg" alt="how_to_apply">
+                <div class="apply__inner">
+                    <h2 class="title">HOW TO APPLY</h2>
+                    <p class="paragraph">When applying for a traffic permit, there are certain
+                        requirements that you must meet that are included in
+                        the examination: requirements for professional
+                        knowledge, solid establishment, good reputation and
+                        financial resources. Important to remember is to confirm
+                        your application for a traffic permit by the company's
+                        company signer or CEO.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section class="clients">
-            <div class="container">
-                <div class="clients__headlines">
-                    <h3 class="default__heading">ABOUT US</h3>
+        <section class="feedbacks" id="faqsSection">
+            <h3>ABOUT US</h3>
+            <h4> Our Awesome Clients</h4>
+            <div class="feedbacks__container">
+                <div class="feedback">
+                    <p>Yes, you will need to have the land owner <br>
+                        sign the permit application as the Permittee, <br>
+                        and you sign the permit as the Applicant or <br>
+                        Agent for the Permittee.</p>
+                    <div class="feedback_user_info">
 
-                    <h2>Out Awesome Clients</h2>
-                </div>
-            </div>
+                        <h5> <img class="feedback__person" src="./img/person_1.svg" alt="person1"> Isak
+                            Patterson</h5>
 
-
-            <div class="clients__list">
-                <div class="client__card">
-                    <p>
-                        Yes, you will need to have the land owner sign the permit application as the Permittee, and you
-                        sign the permit as the Applicant or Agent for the Permittee.
-                    </p>
-
-                    <div class="author">
-                        <img src="./img/author1.svg" alt="Isak Pettersson">
                     </div>
                 </div>
-
-                <div class="client__card">
-                    <p>
-                        From most barricade or traffic control companies located in the phone book. They employ
-                        certified Traffic Control Supervisors (TCS) who can generate and certify the traffic control
-                        plan.
-                    </p>
-                    <div class="author">
-                        <img src="./img/author2.svg" alt="Simon Sandberg">
+                <div class="feedback">
+                    <p>From most barricade or traffic control<br>
+                        companies located in the phone book. They <br>
+                        employ certified Traffic Control Supervisors<br>
+                        (TCS) who can generate and certify the<br>
+                        traffic control plan. </p>
+                    <div class="feedback_user_info">
+                        <h5> <img class="feedback_person" src="./img/person_2.svg" alt="person2">Simon
+                            Sandberg</h5>
                     </div>
                 </div>
-
-                <div class="client__card">
-                    <p>
-                        An A-Line, or access restriction deed is a property right that has been obtained by CDOT for the
-                        sole purpose of prohibiting direct
-                    </p>
-                    <div class="author">
-                        <img src="./img/author3.svg" alt="Isak Pettersson">
+                <div class="feedback">
+                    <p>An A-Line, or access restriction deed is a<br>
+                        property right that has been obtained by<br>
+                        CDOT for the sole purpose of prohibiting<br>
+                        direct.</p>
+                    <div class="feedback_user_info">
+                        <h5><img class="feedback__person" src="./img/person_3.svg" alt="person3">Isak
+                            Patterson</h5>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div>
-            <p>Copyright @ 2019</p>
-
-            <img src="./img/logo.svg" alt="TRAFICO." class="footer__logo">
-
-            <div class="socials">
-                <a href="#"><img src="./img/facebook.svg" alt="Facebook" class="socials__logo"></a>
-                <a href="#"><img src="./img/twitter.svg" alt="Twitter" class="socials__logo"></a>
-                <a href="#"><img src="./img/instagram.svg" alt="Instagram" class="socials__logo"></a>
-            </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <p>Copyright &copy; 2024</p>
+            <img src="./img/logo.svg" alt="logo">
+            <ul class="social__links">
+                <li><a href="#"><img src="img/facebook.svg" alt="Facebook"></a></li>
+                <li><a href="#"><img src="img/twitter.svg" alt="Twitter"></a></li>
+                <li><a href="#"><img src="img/instagram.svg" alt="Instagram"></a></li>
+            </ul>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>
