@@ -9,8 +9,8 @@
   font-size: 14px;
   border-radius: 8px;
   border-width: 2px;
-  border-color: black;
-  background-color: rgb(144, 138, 138);
+  background-color: rgb(41, 41, 41);
+  color: white;
 }
 
 .filter-bar button {
@@ -18,5 +18,6 @@
   padding: 10px 30px;
   font-size: 14px;
   border-radius: 8px;
-  background-color: rgb(144, 138, 138);
+  background-color: rgb(41, 41, 41);
+  color: white;
 }

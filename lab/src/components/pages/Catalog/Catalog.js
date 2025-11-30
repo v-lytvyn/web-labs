@@ -1,13 +1,11 @@
-import FilterBar from "./FilterBar/FilterBar";
 import CatalogList from "./CatalogList/CatalogList";
 
 const Catalog = () => {
-    return (
-      <div>
-        <FilterBar/>
-        <CatalogList/>
-      </div>
-    );
-  };
+  return (
+    <div>
+      <CatalogList />
+    </div>
+  );
+};
 
 export default Catalog

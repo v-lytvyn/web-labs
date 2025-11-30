@@ -1,0 +1,119 @@
+.cart-page {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(41, 41, 41);
+}
+
+.cart-page h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dec50b;;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.cart-item-info h2 {
+    font-size: 16px;
+    margin: 0;
+    color: white;
+}
+
+.cart-item-info p {
+    margin: 5px 0 0;
+    color: white;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-item-actions button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-item-actions button:hover {
+    background-color: #ddd;
+}
+
+.cart-item-actions span {
+    font-size: 16px;
+    width: 30px;
+    text-align: center;
+    color: white;
+}
+
+.cart-item-total {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+}
+
+.btn-back,
+.btn-continue {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cca000;;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-back:hover,
+.btn-continue:hover {
+    background-color: #b18b00;
+}
+
+.btn-back {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.btn-back:hover {
+    background-color: #f9f9f9;
+}

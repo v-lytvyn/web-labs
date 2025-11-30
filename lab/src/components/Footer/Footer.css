@@ -9,12 +9,13 @@ footer {
   background-color: black;
 }
 
-.branding h4{
+.branding h4 {
   text-align: left;
   margin-bottom: 10px;
   color: white;
 }
-.branding p{
+
+.branding p {
   max-width: 450px;
   font-size: 14px;
   color: white;
