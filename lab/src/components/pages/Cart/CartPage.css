@@ -1,119 +1,244 @@
+/* CartPage.css */
+
+/* Основна картка сторінки */
 .cart-page {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    border: 1px solid;
-    border-radius: 5px;
-    background-color: rgb(41, 41, 41);
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid #333;
+    color: #e0e0e0;
 }
 
+/* Заголовок */
 .cart-page h1 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: white;
+    text-align: left;
+    /* Вирівнюємо вліво для строгості */
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f5c518;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
 }
 
+/* Якщо кошик порожній */
+.cart-page>p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    padding: 2rem;
+}
+
+/* --- ЕЛЕМЕНТ ТОВАРУ --- */
 .cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: 1px solid #dec50b;;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+    /* Центрування по вертикалі - дуже важливо! */
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.2s ease;
 }
 
+/* Останній елемент без лінії */
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+/* Ліва частина: Картинка + Текст */
 .cart-item-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1.5rem;
+    flex: 1;
+    /* Займає весь вільний простір */
 }
 
+/* Постер */
 .cart-item-info img {
     width: 60px;
-    height: 60px;
-    border-radius: 5px;
+    height: 90px;
+    /* Чітка вертикальна пропорція */
+    border-radius: 4px;
     object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+    /* Щоб картинка не стискалася */
+}
+
+/* Текстовий блок */
+.cart-item-info>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    /* Відступ між назвою та режисером */
 }
 
 .cart-item-info h2 {
-    font-size: 16px;
+    font-size: 1.1rem;
     margin: 0;
-    color: white;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .cart-item-info p {
-    margin: 5px 0 0;
-    color: white;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #aaa;
 }
 
+.cart-item-director {
+    color: #777 !important;
+    /* Трохи темніший для другорядної інфо */
+    font-size: 0.85rem !important;
+    font-style: italic;
+}
+
+/* --- ПРАВА ЧАСТИНА: Кнопки та Ціна --- */
+
+/* Контейнер для кнопок і ціни, щоб вони трималися разом */
 .cart-item-actions {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2rem;
+    /* Відступ між кнопками і ціною */
 }
 
-.cart-item-actions button {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    font-size: 16px;
+/* Блок з кнопками + - */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    border: 1px solid #444;
+    padding: 2px;
+}
+
+/* Самі кнопки */
+.cart-item button {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
     cursor: pointer;
-    color: #333;
+    border-radius: 4px;
+    transition: background 0.2s;
+    display: flex;
+    /* Центрування + і - */
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4px;
+    /* Візуальна корекція висоти символів */
 }
 
-.cart-item-actions button:hover {
-    background-color: #ddd;
+.cart-item button:hover {
+    background-color: #f5c518;
+    color: #000;
 }
 
-.cart-item-actions span {
-    font-size: 16px;
+/* Цифра кількості */
+.cart-item span {
     width: 30px;
     text-align: center;
-    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #fff;
 }
 
+/* Ціна */
 .cart-item-total {
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: white;
+    color: #f5c518;
+    min-width: 80px;
+    /* Фіксована ширина, щоб цифри стояли рівно */
+    text-align: right;
 }
+
+/* --- НИЖНЯ ЧАСТИНА --- */
 
 .cart-total {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #333;
     text-align: right;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    color: white;
 }
 
-.btn-back,
-.btn-continue {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #cca000;;
+.cart-total h2 {
+    font-size: 1.8rem;
     color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 10px;
 }
 
-.btn-back:hover,
-.btn-continue:hover {
-    background-color: #b18b00;
+.cart-buttons {
+    display: flex;
+    justify-content: flex-end;
+    /* Кнопки праворуч */
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .btn-back {
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #333;
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 1px solid #555;
+    color: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
 }
 
 .btn-back:hover {
-    background-color: #f9f9f9;
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-continue {
+    padding: 0.8rem 2.5rem;
+    background-color: #f5c518;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-continue:hover {
+    background-color: #e2b616;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 197, 24, 0.4);
+}
+
+/* Адаптивність */
+@media (max-width: 650px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .cart-item-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    .cart-buttons {
+        flex-direction: column-reverse;
+    }
+
+    .btn-back,
+    .btn-continue {
+        width: 100%;
+        text-align: center;
+    }
 }

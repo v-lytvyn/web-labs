@@ -17,6 +17,7 @@ const CartPage = () => {
             ) : (
                 items.map(item => (
                     <div key={item.id} className="cart-item">
+
                         <div className="cart-item-info">
                             <img src={item.image} alt={item.title} />
                             <div>
@@ -27,22 +28,42 @@ const CartPage = () => {
                         </div>
 
                         <div className="cart-item-actions">
-                            <button onClick={() => dispatch(removeFromCart(item.id))}>-</button>
-                            <span>{item.quantity}</span>
-                            <button onClick={() => dispatch(addToCart(item))}>+</button>
+
+                            <div className="quantity-controls">
+                                <button onClick={() => dispatch(removeFromCart(item.id))}>-</button>
+                                <span>{item.quantity}</span>
+                                <button onClick={() => dispatch(addToCart(item))}>+</button>
+                            </div>
+
+                            <div className="cart-item-total">
+                                ${item.totalPrice.toFixed(2)}
+                            </div>
                         </div>
 
-                        <div className="cart-item-total">${item.totalPrice.toFixed(2)}</div>
                     </div>
                 ))
             )}
 
-            <div className="cart-total">
-                <h2>Total amount: ${totalAmount.toFixed(2)}</h2>
-            </div>
+            {items.length > 0 && (
+                <div className="cart-total">
+                    <h2>Total amount: ${totalAmount.toFixed(2)}</h2>
+                </div>
+            )}
 
-            <button className="btn-back" onClick={() => navigate(-1)}>Back to Catalog</button>
-            <button className="btn-continue">Continue</button>
+            <div className="cart-buttons">
+                <button className="btn-back" onClick={() => navigate('/catalog')}>
+                    ← Back to Catalog
+                </button>
+
+                {items.length > 0 && (
+                    <button
+                        className="btn-continue"
+                        onClick={() => navigate('/checkout')}
+                    >
+                        Checkout Order
+                    </button>
+                )}
+            </div>
         </div>
     );
 };

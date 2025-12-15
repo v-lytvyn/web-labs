@@ -1,52 +1,172 @@
-.navigation,
-.search-bar {
+.navigation {
   display: flex;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 70px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-.navigation img {
-  max-width: 150px;
-  margin-top: 10px;
-  margin-left: 15px;
+.navigation-img {
+  height: 45px;
+  width: auto;
+  transition: transform 0.3s ease;
 }
 
-.nav {
-  text-align: center;
-  margin-top: 30px;
-  margin-left: 25%;
+.navigation-img:hover {
+  transform: scale(1.05);
 }
 
-.nav a {
-  font-size: 18px;
-  margin: 0 25px;
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 1.1rem;
   text-decoration: none;
-  color: white;
-  background-color: rgb(41, 41, 41);
-  padding: 10px;
-  border-radius: 10px;
-  padding: 10px 25px;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 5px 0;
 }
 
-.nav a:hover {
-  background: rgba(0, 0, 0, 0);
-  color: white;
-  box-shadow: inset 0 0 0 3px white;
-  transition: 0.4s;
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f5c518;
 }
 
-.search-bar {
-  margin: 20px 0 10px 21%;
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f5c518;
+  transition: width 0.3s ease;
 }
 
-.search-bar input[type="text"] {
-  font-size: 14px;
-  border: 2px solid;
-  border-radius: 8px;
-  background-color: rgb(41, 41, 41);
-  color: white;
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
 }
 
-.search-bar input[type="text"]::placeholder {
+.cart-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background-color: #e50914;
   color: white;
-  padding-left: 5px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-actions {
+  min-width: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search-bar input {
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 0.9rem;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #f5c518;
+  width: 250px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(245, 197, 24, 0.2);
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .search-bar input:focus {
+    width: 100%;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.logout-btn {
+  margin-left: 15px;
+  background-color: transparent;
+  border: 1px solid #f5c518;
+  color: #f5c518;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #f5c518;
+  color: black;
+}
+
+.login-link {
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
